@@ -11,8 +11,7 @@ workflows:
         - name: Build KMP XCFramework
           script: |
             chmod +x gradlew
-            cd shared
-            ../gradlew assembleSharedKitDebugXCFramework
+            ./gradlew :shared:assembleSharedKitDebugXCFramework
         - name: Generate Xcode project
           script: |
             cd iosApp
